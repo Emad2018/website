@@ -13,7 +13,11 @@
     scroll-behavior: smooth;
   }
    /* End Global rules */
-  
+   #main
+   {
+       width: 100vw;
+       height: auto;
+   }
   /* Start of navSection*/
   #navSection
   {
@@ -42,7 +46,7 @@
 /*Start of homeSidebar  */
 
 #homeSidebarLeft
-{
+{ z-index: 3;
   margin-top: 80px;
   background-color: #f3f2ef; */
 }

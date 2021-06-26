@@ -17,7 +17,7 @@
 /* Start of navSection*/
 #navSection
 {
-  z-index: 2;
+  z-index: 3;
   padding: 0px;
 }
  .menu-list
@@ -45,6 +45,7 @@
 
 #homeSidebarLeft
 {
+  z-index: 2;
   margin-top: 80px;
   background-color: #f3f2ef;
 }
@@ -66,7 +67,7 @@
 {
   height: 70vh;
   width: 100%;
-  background-image: url("../images/leonardo-ramos-CJ4mbwSK3EY-unsplash.jpg");
+  background-image: url("../images/background.jpg");
   /* background-image: var(--bs-gradient); */
   background-size: cover;
   padding: 0px;
@@ -227,7 +228,7 @@
 footer {
  text-align: center;
   padding: 3px;
-  background-color: gray;
+  background-color: rgba(0,0,0,.75);
   color: white;
   font-size: 2em;
 }
