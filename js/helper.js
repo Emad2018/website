@@ -6,6 +6,9 @@ var nav_fixed = '<nav class="navbar navbar-expand-lg %color% fixed-top "><div cl
 var HTMhx = '<h%x%>%data%</h%x%>'
 var HTMLlinkButton = ' <a target="_blank" class="btn btn-%color% p-3" href="%href%" role="button">%data%</a>'
 
+var new_section = '<section id="%id%"  class="col-sm-9 fs-5" ></section>';
+var new_header = '<header id="%id%"  class="col-sm-12 fs-5" ></header>';
+
 var HTMLorgInfo = '<div id="%id%" class="col-sm-3  align-items-md-baseline"></div>';
 var HTMLjobInfo = '<section id="%id%"  class="col-sm-9 fs-5" ></section>';
 var HTMLPic = '<figure><img src="%data%" alt="%alt%"></figure>';
