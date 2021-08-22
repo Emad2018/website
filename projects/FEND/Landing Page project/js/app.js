@@ -21,14 +21,7 @@ let new_section = '<section id="%id%" data-nav="%data-nav%"><div class="landing_
 const addSectionButton = document.querySelector('#addSectionButton');
 let navbar__list = document.querySelector("#navbar__list");
 let main_section = document.querySelector("main");
-let section_event = "";
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // some code..
-    section_event = "touchmove";
-}
-else {
-    section_event = "mouseenter";
-}
+
 
 let page_sections = [
     {
@@ -158,10 +151,6 @@ function add_newsection() {
 
 
 }
-
-
-
-
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -204,11 +193,6 @@ function add_newnavbar() {
 
 }
 
-
-
-
-
-
 // Add class 'active' to section when near top of viewport
 function active_navbar(id) {
     let current_active_li = document.querySelectorAll("#navbar__list li.active");
@@ -247,49 +231,40 @@ addSectionButton.addEventListener('click', function () {
         page_sections.push({ "title": new_title.value, "content": new_content.value });
         add_newsection();
         add_newnavbar();
-        add_neweventlistner();
+        // add_neweventlistner();
     }
-
-
-
     new_title.value = "";
     new_content.value = "";
 })
 
-function build_eventlistner() {
+
+window.addEventListener("scroll", function (ev) {
     let page_sections = document.querySelectorAll("main section");
+    let min_position = 99999999;
+    let current_Yoffset = window.scrollY;
+    let diff = 0;
+    let current_section = page_sections[0];
     for (section of page_sections) {
-        section.addEventListener(section_event, function (ev) {
-            console.log(ev);
 
-            var current = main_section.getElementsByClassName(" your-active-class");
+        diff = Math.abs(section.offsetTop - current_Yoffset);
+        if (diff < min_position) {
+            current_section = section;
+            min_position = diff;
+        }
 
-            if (current.length > 0) {
-                current[0].className = current[0].className.replace(" your-active-class", "");
-            }
-            // Set sections as active
-            this.className = " your-active-class";
-            active_navbar(this.id);
 
-        })
+    }
+    var current = main_section.getElementsByClassName(" your-active-class");
+
+    if (current.length > 0) {
+        current[0].className = current[0].className.replace(" your-active-class", "");
     }
 
-}
+    current_section.className = " your-active-class";
+    active_navbar(current_section.id);
 
-function add_neweventlistner() {
-    let page_sections = document.querySelectorAll("main section");
-    let section = page_sections[page_sections.length - 1];
-    section.addEventListener(section_event, function (ev) {
-        var current = main_section.getElementsByClassName(" your-active-class");
-        if (current.length > 0) {
-            current[0].className = current[0].className.replace(" your-active-class", "");
-        }
-        // Set sections as active
-        this.className = " your-active-class";
-        active_navbar(this.id);
-    })
-}
+
+})
 
 build_sections();
 build_navbar();
-build_eventlistner();
