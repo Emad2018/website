@@ -21,6 +21,14 @@ let new_section = '<section id="%id%" data-nav="%data-nav%"><div class="landing_
 const addSectionButton = document.querySelector('#addSectionButton');
 let navbar__list = document.querySelector("#navbar__list");
 let main_section = document.querySelector("main");
+let section_event = "";
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    // some code..
+    section_event = "touchmove";
+}
+else {
+    section_event = "mouseenter";
+}
 
 let page_sections = [
     {
@@ -235,14 +243,15 @@ addSectionButton.addEventListener('click', function () {
         errorHeader.innerText = "Missed title or content";
     }
     else {
-        errorHeader.innerText = ""
+        errorHeader.innerText = "";
+        page_sections.push({ "title": new_title.value, "content": new_content.value });
+        add_newsection();
+        add_newnavbar();
+        add_neweventlistner();
     }
 
 
-    page_sections.push({ "title": new_title.value, "content": new_content.value });
-    add_newsection();
-    add_newnavbar();
-    add_neweventlistner();
+
     new_title.value = "";
     new_content.value = "";
 })
@@ -250,7 +259,8 @@ addSectionButton.addEventListener('click', function () {
 function build_eventlistner() {
     let page_sections = document.querySelectorAll("main section");
     for (section of page_sections) {
-        section.addEventListener('mouseenter', function (ev) {
+        section.addEventListener(section_event, function (ev) {
+            console.log(ev);
 
             var current = main_section.getElementsByClassName(" your-active-class");
 
@@ -269,7 +279,7 @@ function build_eventlistner() {
 function add_neweventlistner() {
     let page_sections = document.querySelectorAll("main section");
     let section = page_sections[page_sections.length - 1];
-    section.addEventListener('mouseenter', function (ev) {
+    section.addEventListener(section_event, function (ev) {
         var current = main_section.getElementsByClassName(" your-active-class");
         if (current.length > 0) {
             current[0].className = current[0].className.replace(" your-active-class", "");
