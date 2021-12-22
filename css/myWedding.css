@@ -1,0 +1,176 @@
+
+/*Start global Rules  */
+*{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  
+   }
+   
+html{
+    scroll-behavior: smooth;
+  }
+
+body{
+	font: normal 16px 'Roboto', sans-serif;	
+	height: 100%;
+	width: 100%;
+}
+
+section p.numbers{font-size: 6em;}
+section p.strings{font-size: 1.5em;}
+section h1{font-size: 4.5em;}
+
+/* countdown styles */
+section{
+    margin-bottom: 100px;
+    text-align:center ;
+}
+div#countdown{color: #353535;
+    
+}
+
+div#countdown p{
+	width: 100%;
+	
+	text-align: center;
+}
+
+p.numbers{
+	width: 100%;
+	height: 85%;
+	background: #FFFFFF;
+	margin-top: -25px;
+	padding-top: 100px;
+}
+
+p.strings{
+	width: 100%;
+	height: auto;
+	padding: 30px 0;
+	background: #FF5722;
+	color: #FFFFFF;
+}
+
+div.cd-box{
+	width: 210px;
+	height: 360px;
+	background: #FFFFFF;
+	float: right;
+	padding: 25px 0 0 0;
+	margin: 30px 15px 0 0;
+	-webkit-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+	-moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+	box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+}
+
+
+
+
+
+/* End Global rules */
+#main
+{
+       width: 100vw;
+       height: auto;
+ }
+/* Start of navSection*/
+#navSection
+{
+    z-index: 2;
+    padding: 0px;
+  }
+.menu-list
+  {
+    width: 100%;
+    height: 100%;
+    font-size: 1.25em;
+    background-color: #ffffff; 
+    opacity: 100%;
+  }
+  /* Start of homePage*/
+#homePage
+{
+  padding: 0px;
+}
+
+#homePage h1
+{
+  color: blue;
+}
+/*Start of homeSidebar  */
+
+#homeSidebarLeft
+{ z-index: 3;
+  margin-top: 80px;
+  background-color: #f3f2ef; */
+}
+#homeSidebarRight
+{
+  margin-top: 80px;
+  background-color: #f3f2ef; */
+}
+/*End of homeSidebar   */
+
+/*Start of homeContent   */
+#homeContent
+{
+ padding-top:80px ;
+ text-align: center;
+
+}
+
+
+footer {
+    text-align: center;
+     padding: 3px;
+     background-color: gray;
+     color: white;
+     font-size: 2em;
+   }
+   
+footer a{
+     color: white;
+     display: inline-flex;
+   }
+
+
+
+.mapouter {
+    
+    text-align: center;
+    height: 500px;
+    margin-bottom: 100px;
+    
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    
+}
+
+
+.location p {
+    font-size: 50px;
+}
+.ourVedio{
+    margin-bottom: 40px;
+}
+.WelcomeMSG{
+    margin-bottom: 40px;
+    
+}
+.WelcomeMSG p{
+    font-size: 2em;
+    margin-top: 10%;
+}
+
+.ourpic
+{
+  border-radius:50%;
+}
