@@ -20,22 +20,26 @@ body{
 	width: 100%;
 }
 
-section p.numbers{font-size: 6em;}
-section p.strings{font-size: 1.5em;}
-section h1{font-size: 4.5em;}
+section p.numbers{font-size: 6vw;}
+section p.strings{font-size: 3vw;}
+section h1{font-size: 4.5vw;}
 
 /* countdown styles */
 section{
     margin-bottom: 100px;
     text-align:center ;
+    padding: 0px;
+}
+.wrapper
+{
+    padding: 0px;
 }
 div#countdown{color: #353535;
-    
+    padding: 0px;
 }
 
 div#countdown p{
 	width: 100%;
-	
 	text-align: center;
 }
 
@@ -43,25 +47,25 @@ p.numbers{
 	width: 100%;
 	height: 85%;
 	background: #FFFFFF;
-	margin-top: -25px;
-	padding-top: 100px;
+	margin-top: -5vh;
+	padding-top: 8vh;
 }
 
 p.strings{
 	width: 100%;
 	height: auto;
-	padding: 30px 0;
+	padding: 4vh 0;
 	background: #FF5722;
 	color: #FFFFFF;
 }
 
 div.cd-box{
-	width: 210px;
-	height: 360px;
+	width: 25vw;
+	height: 15vh;
 	background: #FFFFFF;
 	float: right;
-	padding: 25px 0 0 0;
-	margin: 30px 15px 0 0;
+	padding: 1vh 0 0 0;
+	margin: 4vh 3vw 0 0;
 	-webkit-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
 	-moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
 	box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
@@ -74,7 +78,6 @@ div.cd-box{
 /* End Global rules */
 #main
 {
-       width: 100vw;
        height: auto;
  }
 /* Start of navSection*/
@@ -82,6 +85,7 @@ div.cd-box{
 {
     z-index: 2;
     padding: 0px;
+    margin: 0px;
   }
 .menu-list
   {
@@ -104,22 +108,26 @@ div.cd-box{
 /*Start of homeSidebar  */
 
 #homeSidebarLeft
-{ z-index: 3;
+{ z-index: -1;
   margin-top: 80px;
-  background-color: #f3f2ef; */
+  background-color: #f3f2ef; 
+  padding: 0px;
 }
 #homeSidebarRight
-{
+{z-index: -1;
   margin-top: 80px;
-  background-color: #f3f2ef; */
+  background-color: #f3f2ef; 
+  padding: 0px;
 }
 /*End of homeSidebar   */
 
 /*Start of homeContent   */
 #homeContent
 {
- padding-top:80px ;
+ margin-top:80px ;
  text-align: center;
+ padding: 0px;
+
 
 }
 
@@ -129,7 +137,7 @@ footer {
      padding: 3px;
      background-color: gray;
      color: white;
-     font-size: 2em;
+     font-size: 3vw;
    }
    
 footer a{
@@ -156,17 +164,23 @@ footer a{
 
 
 .location p {
-    font-size: 50px;
+    font-size: 5vw;
 }
 .ourVedio{
     margin-bottom: 40px;
+    height: 45vh;
+    padding: 0px;
+    
+}
+.ourVedio iframe{
+    padding: 0px;
 }
 .WelcomeMSG{
     margin-bottom: 40px;
     
 }
 .WelcomeMSG p{
-    font-size: 2em;
+    font-size: 2vw;
     margin-top: 10%;
 }
 
