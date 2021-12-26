@@ -1,48 +1,4 @@
-// Set the date we're counting down to
-var countDownDate = new Date("Mar 18, 2022 18:00:00").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function () {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-}, 1000);
-
-
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.036 };
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 4,
-        center: uluru,
-    });
-    // The marker, positioned at Uluru
-    const marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-    });
-}
 
 
 
@@ -125,3 +81,22 @@ $(document).ready(function () {
 });
 
 
+"use strict";
+function submitForm(oFormElement) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onload = function () {
+        var result = xhr.responseText;
+        var resultElement = document.getElementById('result');
+        resultElement.className = 'bg-success';
+        resultElement.innerText = result;
+
+    }
+    xhr.open(oFormElement.method, oFormElement.action, true);
+    var review = document.getElementById('review');
+    var guestname = document.getElementById('guestname');
+    var message = String(guestname.value) + ":" + String(review.value)
+    console.log(message)
+    xhr.send(message);
+    return false;
+}
