@@ -13,19 +13,21 @@
         "use strict";
         function submitForm(oFormElement) {
             var xhr = new XMLHttpRequest();
+
             xhr.onload = function () {
                 var result = xhr.responseText;
+                result = result.split("$$");
                 var resultElement = document.getElementById('result');
-                if (result == "NEGATIVE") {
+                if (result[0] == "NEGATIVE") {
                     resultElement.className = 'bg-danger';
-                    resultElement.innerHTML = 'Your review was Negative!';
-                } else if (result == "POSITIVE") {
+                    resultElement.innerHTML = 'Your review was Negative! with confidence:' + result[1];
+                } else if (result[0] == "POSITIVE") {
                     resultElement.className = 'bg-success';
-                    resultElement.innerHTML = 'Your review was Positive !';
+                    resultElement.innerHTML = 'Your review was Positive! with confidence:' + result[1];
                 }
                 else {
                     resultElement.className = 'bg-warning';
-                    resultElement.innerHTML = 'Your review was  ' + result + "!";
+                    resultElement.innerHTML = 'Your review was  ' + result[0] + "!with confidence:" + result[1];
                 }
             }
             xhr.open(oFormElement.method, oFormElement.action, true);
