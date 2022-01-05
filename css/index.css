@@ -126,14 +126,18 @@ body{
 }
 #about img
 {
- margin-top: 50px;
+ 
   width: 100%;
   border-radius:50%;
 }
-#about section
+.welcome 
 {
-  padding: 50px;
-  
+  display: flex;
+align-items: center;
+}
+.message 
+{
+  margin-top: 5vh;
 }
 /*end of about   */
 /*Start of work Experience   */

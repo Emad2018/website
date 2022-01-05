@@ -15,7 +15,8 @@ var bio = {
         "location": "Cairo,Egypt",
         "timezone": "GMT+2"
     },
-    "about": "Hello my Friend and welcome in my personal Website 👋<br> <br> I'm Abdelrahman Emad, A Mechatronics Engineer with a demonstrated" +
+    "welcome": "Hello my Friend and welcome in my personal Website 👋<br> <br>",
+    "about": "I'm Abdelrahman Emad, A Mechatronics Engineer with a demonstrated" +
         " history of working in the automotive industry. <br> <br>Skilled in Python, C/C++," +
         " Computer Vision,ML and Sensor Fusion,.<br><br>" +
         "A Bachelor's degree holder focused in Mechatronics Engineering from Ain Shams University in Cairo.<br><br>" +
@@ -195,7 +196,9 @@ function display_about() {
     var replacedText = "";
     replacedText = HTMLbioPic.replace("%data%", bio.bioPic)
     $("#bioPic").append(replacedText);
-    $("#about section p").append(bio.about);
+    $("#about .welcome").append(bio.welcome);
+    $("#about .message").append(bio.about);
+
 
 }
 
