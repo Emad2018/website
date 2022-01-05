@@ -1,3 +1,5 @@
+let online = "http://abdelrahman-emad.com/"
+let offline = ""
 var list_element = '<li class="%class%">%data%</li>';
 var HTMLul = '<ul></ul>'
 var a_element = '<a target="_blank" href="%href%" class="%class%">%data%</a>';

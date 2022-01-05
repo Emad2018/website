@@ -13,20 +13,31 @@
   scroll-behavior: smooth;
 }
  /* End Global rules */
-
+body{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
 /* Start of navSection*/
 #navSection
 {
+ 
   z-index: 3;
+  margin: 0;
   padding: 0px;
+  height: 9vh;
+  width: 100%;
+  
 }
+
+
  .menu-list
 {
-  width: 100%;
   height: 100%;
+  width: 100%;
   font-size: 1.25em;
   background-color: #ffffff; 
-  opacity: 100%;
+  
   
 }
 /*End of navSection*/
@@ -34,6 +45,7 @@
 /* Start of homePage*/
 #homePage
 {
+  margin-top: 9vh;
   padding: 0px;
 }
 
@@ -46,26 +58,18 @@
 #homeSidebarLeft
 {
   z-index: 2;
-  margin-top: 80px;
+ 
   background-color: #f3f2ef;
 }
-#homeSidebarRight
-{
-  margin-top: 80px;
-  background-color: #f3f2ef;
-}
+
 /*End of homeSidebar   */
 
 /*Start of homeContent   */
-#homeContent
-{
- padding-top:80px ;
 
-}
 /*Start of header   */
 #header
 {
-  height: 70vh;
+  height: min(70vw,70vh);
   width: 100%;
   background-image: url("../images/background.jpg");
   /* background-image: var(--bs-gradient); */
@@ -85,34 +89,33 @@
 } 
 
 #headerName{
-  padding-top: 80px;
+  padding-top: 7vh;
 }
 
 #social-logos{
-  position: absolute;
   width: 100%;
   bottom: 0;
   text-align: center;
-  font-size:80px;
+  font-size:3.25em;
   color: white;
 }
 .github-logo
 {
   
-  margin: 50px;
-  margin-bottom: 0px;
+  margin-left: 5vw;
+  
 }
 .linkedin-logo
 {
   
-  margin: 50px;
-  margin-bottom: 0px;
+  margin-left: 5vw;
+  
 }
 .gmail-logo
 {
   
-  margin: 50px;
-  margin-bottom: 0px;
+  margin-left: 5vw;
+  
 }
 /*End of header   */
 

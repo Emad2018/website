@@ -1,3 +1,8 @@
+let ref_links = {
+    "Home": "index.html",
+    "projects": "projects.html",
+    "resume": "resume.html"
+}
 
 var bio = {
     "name": "Abdelrahman Emad",
