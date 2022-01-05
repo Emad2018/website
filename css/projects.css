@@ -29,33 +29,58 @@
     opacity: 100%;
     
   }
-  /* Start of homePage*/
-#homePage
-{
-  padding: 0px;
-}
+  /* Start of homeContent*/
+  #homeContent
+  {
+   padding-top:80px ;
+  
+  }
 
-#homePage h1
-{
-  color: blue;
-}
-/*Start of homeSidebar  */
+  #homeContent h1
+  {
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(23, 192, 235);
+  }
 
-#homeSidebarLeft
-{
-  margin-top: 80px;
-  /* background-color: #f3f2ef; */
-}
-#homeSidebarRight
-{
-  margin-top: 80px;
-  /* background-color: #f3f2ef; */
-}
-/*End of homeSidebar   */
+  #homeContent h2
+  {
+    font-size: 1em;
+    text-align: center;
+  }
 
-/*Start of homeContent   */
-#homeContent
-{
- padding-top:80px ;
+  #homeContent h3
+  {
+    font-size: 1em;
+  }
 
-}
+  #homeContent section
+  {
+    margin-bottom: 5vh;
+  }
+  #homeContent ol
+  {
+   list-style-type: upper-alpha;
+    
+  }
+  #homeContent li
+  {
+    margin-top: 2vh;
+
+  }
+
+
+
+  footer {
+    text-align: center;
+     padding: 3px;
+     background-color: rgba(0,0,0,.75);
+     color: white;
+     font-size: 2em;
+   }
+   
+   footer a{
+     color: white;
+     display: inline-flex;
+   }
+

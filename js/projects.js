@@ -1,40 +1,76 @@
-// var projects = {
-//     "udacity": [{
-//         "ndname": "Web Development Professional Nanodegree Program",
-//         "ndprojects": [
-//             {
-//                 "name": "Landing Page",
-//                 "description": "Build a landing page that uses JavaScript to create an interactive navigational experience for the user.",
-//                 "url": "/FEND/index.html"
-//             }
-//         ]
-//     }],
-//     "aws": [],
+let homeContent = document.querySelector("#homeContent");
 
-// };
+let page_sections =
+    [
+        {
+            "id": "web",
+            "courseName": "Web Development Professional Nanodegree Program",
+            "school": "Udacity",
+            "projects": [
+                {
+                    "title": "Landing Page",
+                    "ref": "projects/FEND/Landing Page project/index.html",
+                    "summary": `Build a landing page that uses JavaScript to create an interactive navigational experience for the user.`
+                }
 
-// function display_certificates() {
-//     var replacedText = "";
-//     for (var i = 0; i < projects.udacity.length; i++) {
-//         var currentCertificate = projects.udacity[i];
-//         var classid = currentCertificate.ndname;
-//         replacedText = new_12section.replace("%id%", classid);
-//         $('#udacity').append(replacedText);
+            ]
+        }
+        ,
+        {
+            "id": "ml",
+            "courseName": "Machine learning Nanodegree Program",
+            "school": "Udacity",
+            "projects": [
+                {
+                    "title": "IMDB Sentiment Analysis",
+                    "ref": "projects/MLND/IMDB Sentiment Analysis/index.html",
+                    "summary": `construct a random tree model to predict the sentiment of a movie review. In addition,we will deploy this model to an endpoint and construct a very simple web app which will interact with our model's deployed endpoint..`
+                }
+            ]
+        }
 
-//         replacedText = HTMLPic.replace("%data%", currentCertificate.certificatePic).replace("%alt%", currentCertificate.title);
-//         $('#' + classid).append(replacedText);
+    ];
+
+
+function build_sections() {
+    let text = "";
+
+
+    for (let i = 0; i < page_sections.length; i++) {
+
+        let section = page_sections[i];
+        let section_id = section.id;
+        let section_courseName = section.courseName;
+        let section_school = section.school;
+        let section_projects = section.projects;
 
 
 
-//         replacedText = HTMLCertificateDetailsButton.replace("%id%", "#" + classid + 'button').replace("%data%", currentCertificate.title + ' Details');
-//         $('#' + classid + ' figure').append(replacedText);
+        let newElement_section = document.createElement('section');
+        let newElement_h1 = document.createElement('h1');
+        let newElement_h2 = document.createElement('h2');
+        let newElement_ol = document.createElement('ol');
+        newElement_section.setAttribute("id", section_id);
+        newElement_h1.innerText = section_courseName;
+        newElement_h2.innerText = section_school;
+        newElement_section.appendChild(newElement_h1);
+        newElement_section.appendChild(newElement_h2);
 
-//         replacedText = create_model_html(classid + 'button', currentCertificate.title, currentCertificate.certificatePic, currentCertificate.school
-//             , currentCertificate.dates, currentCertificate.description, currentCertificate.programUrl, currentCertificate.certificateId);
-//         $('#models').append(replacedText);
+        for (let i = 0; i < section_projects.length; i++) {
+            let project = section_projects[i];
+            let newElement_li = document.createElement('li');
+            let html = `<a href="${project.ref}" ><h3>${project.title} </h3> </a> <p> ${project.summary}</p> `;
 
-//     }
+            newElement_li.innerHTML = html;
+            newElement_ol.appendChild(newElement_li);
 
-// }
 
-// display_certificates();
+        }
+
+        newElement_section.appendChild(newElement_ol);
+        homeContent.appendChild(newElement_section);
+
+
+    }
+}
+build_sections();

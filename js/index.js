@@ -40,6 +40,26 @@ var education = {
     ],
     "certificates": [
         {
+            "title": "AWS Certified Machine Learning – Specialty",
+            "school": "AWS",
+            "dates": "AUG-2021",
+            "programUrl": "https://aws.amazon.com/certification/certified-machine-learning-specialty/",
+            "certificatePic": "images/certificates/AWSML.jpg",
+            "certificateId": "https://www.credly.com/badges/429b8f32-8b62-47cc-b390-0e56136fabc3",
+            "description": "AWS Certified Machine Learning - Specialty is intended for individuals who perform a development or data science role and have more than one year of experience developing, architecting, or running machine learning/deep learning workloads in the AWS Cloud. Before you take this exam, we recommend you have "
+
+        },
+        {
+            "title": "Web Development Professional Nanodegree Program",
+            "school": "Udacity",
+            "dates": "Sep-2021",
+            "programUrl": "https://egfwd.com/specializtion/professional-web-development/",
+            "certificatePic": "images/certificates/WEBPRO.svg",
+            "certificateId": "https://confirm.udacity.com/URRGFSGK",
+            "description": "Learn advanced Javascript, Dom methods and how to work with APIs. You will be able to add interactivity and different services to your website and make it more engaging and alive! "
+
+        },
+        {
             "title": "Machine Learning Engineer Nanodegree",
             "school": "Udacity",
             "dates": "April-2021",
@@ -113,7 +133,7 @@ var education = {
             "title": "FWD Web Development Challenger Track",
             "school": "Udacity",
             "dates": "Oct-2020",
-            "programUrl": "https://egfwd.com/web/",
+            "programUrl": "https://egfwd.com/specializtion/challenger-web-development/",
             "certificatePic": "images/certificates/FWDWEB1.jpg",
             "certificateId": "https://graduation.udacity.com/confirm/QXEPD2XJ",
             "description": "the web specialization track is an opportunity to develop your programming skills gradually through a fully integrated and stackable learning journey. The program starts by introducing Javascript concepts and slowly progressing towards React to become a front-end developer."
