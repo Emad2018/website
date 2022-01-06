@@ -15,13 +15,11 @@ var bio = {
         "location": "Cairo,Egypt",
         "timezone": "GMT+2"
     },
-    "welcome": "Hello my Friend and welcome in my personal Website 👋<br> <br>",
-    "about": "I'm Abdelrahman Emad, A Mechatronics Engineer with a demonstrated" +
-        " history of working in the automotive industry. <br> <br>Skilled in Python, C/C++," +
-        " Computer Vision,ML and Sensor Fusion,.<br><br>" +
-        "A Bachelor's degree holder focused in Mechatronics Engineering from Ain Shams University in Cairo.<br><br>" +
-        "when I started working on this website,It was for making a real project for my HTML,CSS and JS self-study 😂.<br>"
-        + "But now I am trying to share my knowladge and  adding as much as I can of my projects that I have done to help other learners.",
+    "welcome": `Hello my Friend and welcome in my personal Website 👋<br> <br>
+    I'm Abdelrahman Emad`,
+    "about": `A SW Developer with a demonstrated history of working in the automotive industry.<br><br>Skilled in Autosar,Python, C/C++,ML/DL,Computer Vision and Sensor Fusion.
+    <br><br>when I started working on this website,It was for making a real project for my HTML,CSS and JS self-study 😂.
+    <br> <br>But now I am trying to share my knowladge and adding as much as I can of my projects that I have done to help other learners.`,
     "skills": [],
     "bioPic": "images/myimage.jpg"
 };

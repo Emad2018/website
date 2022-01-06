@@ -122,11 +122,12 @@ body{
 /*Start of about   */
 #about
 { 
+  font-size: 1.5em;
   padding-top: 100px;
 }
 #about img
 {
- 
+ text-align: left;
   width: 100%;
   border-radius:50%;
 }
