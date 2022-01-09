@@ -1,0 +1,130 @@
+ /*Start global Rules  */
+ *{
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+  
+   }
+   
+   html{
+    scroll-behavior: smooth;
+  }
+
+   /* End Global rules */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-width: 100%;
+  }
+
+  /* Start of navSection*/
+  #navSection
+  {
+   
+    z-index: 3;
+    margin: 0;
+    padding: 0px;
+    height: 9vh;
+    width: 100%;
+    
+  }
+  
+  
+   .menu-list
+  {
+    height: 100%;
+    width: 100%;
+    font-size: 1.25em;
+    background-color: #ffffff; 
+  }
+#homePage
+    {
+        margin: 0px;
+      margin-top: 9vh;
+      padding: 0px;
+      max-width:100%;
+     
+  }
+  #homeContent
+{
+  padding: 0px;
+  margin: 0px;
+
+}
+  #homeSidebar
+  {
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f3f2ef;
+  }
+#certificates 
+{
+  
+  padding:0vw;
+  margin: 0px;
+  max-width: 100%;
+  
+}
+
+
+#certificates figure 
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align:center;
+  
+  
+}
+#certificates figure img
+{
+  position: relative;
+  width: 100%;
+  height: 80%;
+  text-align:center;
+  
+  
+}
+
+#certificates button
+{
+ 
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 20%;
+  height: 50px;
+
+  
+}
+
+
+#models img{
+  
+  width: 100%;
+  height: 100%;
+}
+
+
+/*End of education Experience   */
+/* End of homeContent */
+/*End of homePage  */
+
+
+footer {
+ text-align: center;
+  padding: 3px;
+  background-color: rgba(0,0,0,.75);
+  color: white;
+  font-size: 2em;
+}
+
+footer a{
+  color: white;
+  display: inline-flex;
+}

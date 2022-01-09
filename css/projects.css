@@ -13,7 +13,12 @@
     scroll-behavior: smooth;
   }
    /* End Global rules */
-  
+   body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-width: 100%;
+  }
   /* Start of navSection*/
   #navSection
   {
@@ -29,18 +34,31 @@
     opacity: 100%;
     
   }
+  #homePage
+{
+  margin-top: 12vh;
+  padding: 0px;
+  max-width:100%;
+}
   /* Start of homeContent*/
   #homeContent
   {
-   padding-top:80px ;
+    max-width:100%;
+    
   
   }
-
+  #homeSidebar
+  {
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f3f2ef;
+  }
   #homeContent h1
   {
     font-size: 1.5em;
     text-align: center;
-    color: rgb(23, 192, 235);
+    color: blue;
   }
 
   #homeContent h2
@@ -67,6 +85,10 @@
   {
     margin-top: 2vh;
 
+  }
+
+  #homeContent li a {
+    color:  rgb(23, 192, 235);
   }
 
 

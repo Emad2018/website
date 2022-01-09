@@ -17,6 +17,8 @@ body{
   margin: 0;
   padding: 0;
   width: 100vw;
+  
+  max-width:100%;
 }
 /* Start of navSection*/
 #navSection
@@ -47,6 +49,7 @@ body{
 {
   margin-top: 9vh;
   padding: 0px;
+  max-width:100%;
 }
 
 #homePage h1
@@ -58,7 +61,8 @@ body{
 #homeSidebar
 {
   z-index: 2;
- 
+  margin: 0px;
+  padding: 0px;
   background-color: #f3f2ef;
 }
 
@@ -66,6 +70,12 @@ body{
 
 /*Start of homeContent   */
 
+#homeContent
+{
+  padding: 0px;
+  margin: 0px;
+
+}
 /*Start of header   */
 #header
 {
@@ -122,7 +132,8 @@ body{
 /*Start of about   */
 #about
 { 
-  font-size: 1.5em;
+  padding: 5vw;
+  font-size: 1em;
   padding-top: 100px;
 }
 #about img
@@ -144,7 +155,8 @@ align-items: center;
 /*Start of work Experience   */
 #workExperience
 { 
-  padding-top: 100px;
+  
+  padding: 5vw;
 }
 #workExperience img
 {
@@ -161,7 +173,7 @@ align-items: center;
 /*Start of education Experience   */
 #education
 { 
-  padding-top: 100px;
+  padding: 5vw;
 }
 #education header
 {
@@ -213,6 +225,13 @@ align-items: center;
   
 }
 
+.moreCertificates
+{
+  font-size: 2em;
+  text-align: center;
+  background-color: rgb(210, 245, 237);
+}
+
 
 #models img{
   
@@ -220,14 +239,7 @@ align-items: center;
   height: 100%;
 }
 
-#footer {
-  position: fixed;
-  left: 450;
-  margin: 0px auto;
-  bottom: 25;
-  margin-top: 50;
-  background-color: transparent;
-}
+
 /*End of education Experience   */
 /* End of homeContent */
 /*End of homePage  */

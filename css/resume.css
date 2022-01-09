@@ -12,11 +12,28 @@
    html{
     scroll-behavior: smooth;
   }
+  body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    
+    max-width:100%;
+  }
    /* End Global rules */
-   #main
+   #homePage
    {
-       width: 100vw;
-       height: auto;
+       margin: 0px;
+     margin-top: 9vh;
+     padding: 0px;
+     max-width:100%;
+    
+ }
+   #homeSidebar
+   {
+     z-index: 2;
+     margin: 0px;
+     padding: 0px;
+     background-color: #f3f2ef;
    }
   /* Start of navSection*/
   #navSection
