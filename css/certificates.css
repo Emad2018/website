@@ -28,23 +28,25 @@ body{
     z-index: 3;
     margin: 0;
     padding: 0px;
-    height: 9vh;
+    height: 6vh;
     width: 100%;
     
   }
   
   
-   .menu-list
-  {
-    height: 100%;
-    width: 100%;
-    font-size: 1.25em;
-    background-color: #ffffff; 
-  }
+  .menu-list
+{
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+  background-color: #ffffff; 
+  
+  
+}
 #homePage
     {
         margin: 0px;
-      margin-top: 9vh;
+      margin-top: 7vh;
       padding: 0px;
       max-width:100%;
      

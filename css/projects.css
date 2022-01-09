@@ -22,21 +22,26 @@
   /* Start of navSection*/
   #navSection
   {
-    z-index: 2;
+   
+    z-index: 3;
+    margin: 0;
     padding: 0px;
-  }
-   .menu-list
-  {
+    height: 6vh;
     width: 100%;
+    
+  }
+  .menu-list
+  {
     height: 100%;
-    font-size: 1.25em;
+    width: 100%;
+    font-size: 1em;
     background-color: #ffffff; 
-    opacity: 100%;
+    
     
   }
   #homePage
 {
-  margin-top: 12vh;
+  margin-top: 7vh;
   padding: 0px;
   max-width:100%;
 }
@@ -44,8 +49,7 @@
   #homeContent
   {
     max-width:100%;
-    
-  
+
   }
   #homeSidebar
   {

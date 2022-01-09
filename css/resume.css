@@ -23,7 +23,7 @@
    #homePage
    {
        margin: 0px;
-     margin-top: 9vh;
+     margin-top: 8vh;
      padding: 0px;
      max-width:100%;
     
@@ -38,22 +38,31 @@
   /* Start of navSection*/
   #navSection
   {
-    z-index: 2;
+  
+    z-index: 3;
+    margin: 0px;
     padding: 0px;
+    height: 6vh;
+    width: 100%;
+    
   }
    .menu-list
   {
     width: 100%;
     height: 100%;
-    font-size: 1.25em;
+    font-size: 1em;
     background-color: #ffffff; 
     opacity: 100%;
     
   }
   /* Start of homePage*/
-#homePage
-{
-  padding: 0px;
+  #homePage
+  {
+      margin: 0px;
+    margin-top: 7vh;
+    padding: 0px;
+    max-width:100%;
+   
 }
 
 #homePage h1
