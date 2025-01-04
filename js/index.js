@@ -82,21 +82,62 @@ var education = {
 };
 var work = {
     "jobs":
-        [
-            {
-                "employer": "Avelabs",
-                "title": "SW Engineer II",
-                "dates": "May 2019-Present",
-                "description": "Full-time",
-                "tasks":
-                    ["Creation of NVM blocks using DaVinci Developer and Davinci Configurator.",
-                        "Implement different types of Indication flags to detect any failures in the NVM operations .",
-                        "Creation of SWCs for Application Layer and RTE Ports using Vector DaVinci Developer.",
-                        "Perform (Unit Testing), Using CANoe, and Lauterbach Trace32 tools for fixing the software bugs.",
-                        "Dealing with JIRA and Plastic tool for tracking the tickets and apply the process of branch merging."
-                    ],
-                "employerLogo": "images/Avelabs-Egypt-9253-1543344533-og.png"
-            }
+
+        [{
+            "employer": "TechnoWelle GmbH",
+            "title": "Senior Software Engineer",
+            "dates": "May 2023-Present ",
+            "description": "Full-time",
+            "tasks":
+                ["Configure BSW module like NVM ,BSWM and Com using ETAS Isolar tool",
+                    "Configure MCAL module like MCU ,FlsTest and PORT using ETAS Isolar tool",
+                    "Develop CAPL scripts for create test cases and reproduce bugs",
+                    "Develop Algorithms in Application SWCS",
+                    "Creation of SWCs for Application Layer and RTE Ports using ETAS Isolar tool",
+                    "Perform (Unit Testing), Using CANoe, and winIdea tools for fixing the software bugs",
+
+                ],
+            "employerLogo": "images/technowelle_gmbh_logo.jpg"
+        },
+        {
+            "employer": "Swift Act",
+            "title": "Senior Software Engineer",
+            "dates": "Oct 2022-May 2023",
+            "description": "Full-time",
+            "tasks":
+                ["CAN DBC integration using Vector DaVinci Developer",
+                    "E2E configuration for Can messages",
+                    "Creation of SWCs for Application Layer and RTE Ports using Vector DaVinci Developer",
+                    "Perform (Unit Testing), Using CANoe, and Lauterbach Trace32 tools for fixing the software bugs",
+
+                ],
+            "employerLogo": "images/swiftact.png"
+        },
+        {
+            "employer": "Expleo Group",
+            "title": "SW Engineer II",
+            "dates": "Jan 2022-Oct 2022",
+            "description": "Full-time",
+            "tasks":
+                ["Creation of Can messages and Signals using Autosar builder and Eb Tresos",
+                    "Analyze the Issues related to NVM and Propose the needed fix",
+                ],
+            "employerLogo": "images/expleo-logo.png"
+        },
+        {
+            "employer": "Avelabs",
+            "title": "SW Engineer II",
+            "dates": "May 2019-Dec 2021",
+            "description": "Full-time",
+            "tasks":
+                ["Creation of NVM blocks using DaVinci Developer and Davinci Configurator",
+                    "Implement different types of Indication flags to detect any failures in the NVM operations",
+                    "Creation of SWCs for Application Layer and RTE Ports using Vector DaVinci Developer",
+                    "Perform (Unit Testing), Using CANoe, and Lauterbach Trace32 tools for fixing the software bugs",
+                    "Dealing with JIRA and Plastic tool for tracking the tickets and apply the process of branch merging"
+                ],
+            "employerLogo": "images/Avelabs-Egypt-9253-1543344533-og.png"
+        }
 
         ],
     "internships":

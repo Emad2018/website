@@ -1,261 +1,260 @@
  /*Start global Rules  */
- *{
+ * {
 
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0px;
+   margin: 0px;
 
  }
- 
- html{
-  scroll-behavior: smooth;
-}
+
+ html {
+   scroll-behavior: smooth;
+ }
+
  /* End Global rules */
-body{
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  
-  max-width:100%;
-}
-/* Start of navSection*/
-#navSection
-{
- 
-  z-index: 3;
-  margin: 0px;
-  padding: 0px;
-  height: 7vh;
-  width: 100%;
-  
-}
+ body {
+   margin: 0;
+   padding: 0;
+   width: 100vw;
+
+   max-width: 100%;
+ }
+
+ /* Start of navSection*/
+ #navSection {
+
+   z-index: 3;
+   margin: 0px;
+   padding: 0px;
+   height: 7vh;
+   width: 100%;
+
+ }
 
 
- .menu-list
-{
-  height: 100%;
-  width: 100%;
-  font-size: 1em;
-  background-color: #ffffff; 
-  
-  
-}
-/*End of navSection*/
-
-/* Start of homePage*/
-#homePage
-{
-  margin-top: 8vh;
-  padding: 0px;
-  max-width:100%;
-}
-
-#homePage h1
-{
-  color: blue;
-}
-/*Start of homeSidebar  */
-
-#homeSidebar
-{
-  z-index: 2;
-  margin: 0px;
-  padding: 0px;
-  background-color: #f3f2ef;
-}
-
-/*End of homeSidebar   */
-
-/*Start of homeContent   */
-
-#homeContent
-{
-  padding: 0px;
-  margin: 0px;
-
-}
-/*Start of header   */
-#header
-{
-  height: min(70vw,70vh);
-  width: 100%;
-  background-image: url("../images/background.jpg");
-  /* background-image: var(--bs-gradient); */
-  background-size: cover;
-  padding: 0px;
-  margin: 0px;
-  
-}
-.overlay {
-  
-  position: relative; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  background-color: rgba(0,0,0,0.75); /* Black background with opacity */
-  z-index:1; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer;
-} 
-
-#headerName{
-  padding-top: 7vh;
-}
-
-#social-logos{
-  width: 100%;
-  bottom: 0;
-  text-align: center;
-  font-size:3.25em;
-  color: white;
-}
-.github-logo
-{
-  
-  margin-left: 5vw;
-  
-}
-.linkedin-logo
-{
-  
-  margin-left: 5vw;
-  
-}
-.gmail-logo
-{
-  
-  margin-left: 5vw;
-  
-}
-/*End of header   */
-
-/*Start of about   */
-#about
-{ 
-  padding: 5vw;
-  font-size: 1em;
-  padding-top: 100px;
-}
-#about img
-{
- text-align: left;
-  width: 100%;
-  border-radius:50%;
-}
-.welcome 
-{
-  display: flex;
-align-items: center;
-}
-.message 
-{
-  margin-top: 5vh;
-}
-/*end of about   */
-/*Start of work Experience   */
-#workExperience
-{ 
-  
-  padding: 5vw;
-}
-#workExperience img
-{
-  width: 90%;
-  
-}
-#workExperience header
-{
-  margin-bottom: 100px;
- 
-}
-/*End of work Experience   */
-
-/*Start of education Experience   */
-#education
-{ 
-  padding: 5vw;
-}
-#education header
-{
-  margin-bottom: 100px;
- 
-}
-#education #schools img
-{
-  padding-right: 12px;
-  width: 90%;
- 
-}
-
-#certificates 
-{
-  padding-top: 100px;
-  
-}
+ .menu-list {
+   height: 100%;
+   width: 100%;
+   font-size: 1em;
+   background-color: #ffffff;
 
 
-#certificates figure 
-{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align:center;
-  
-  
-}
-#certificates figure img
-{
-  position: relative;
-  width: 100%;
-  height: 80%;
-  text-align:center;
-  
-  
-}
+ }
 
-#certificates button
-{
- 
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 20%;
-  height: 50px;
+ /*End of navSection*/
 
-  
-}
+ /* Start of homePage*/
+ #homePage {
+   margin-top: 8vh;
+   padding: 0px;
+   max-width: 100%;
+ }
 
-.moreCertificates
-{
-  font-size: 2em;
-  text-align: center;
-  background-color: rgb(210, 245, 237);
-}
+ #homePage h1 {
+   color: blue;
+ }
+
+ /*Start of homeSidebar  */
+
+ #homeSidebar {
+   z-index: 2;
+   margin: 0px;
+   padding: 0px;
+   background-color: #f3f2ef;
+ }
+
+ /*End of homeSidebar   */
+
+ /*Start of homeContent   */
+
+ #homeContent {
+   padding: 0px;
+   margin: 0px;
+
+ }
+
+ /*Start of header   */
+ #header {
+   height: min(70vw, 70vh);
+   width: 100%;
+   background-image: url("../images/background.jpg");
+   /* background-image: var(--bs-gradient); */
+   background-size: cover;
+   padding: 0px;
+   margin: 0px;
+
+ }
+
+ .overlay {
+
+   position: relative;
+   /* Sit on top of the page content */
+   width: 100%;
+   /* Full width (cover the whole page) */
+   height: 100%;
+   /* Full height (cover the whole page) */
+   background-color: rgba(0, 0, 0, 0.75);
+   /* Black background with opacity */
+   z-index: 1;
+   /* Specify a stack order in case you're using a different order for other elements */
+   cursor: pointer;
+ }
+
+ #headerName {
+   padding-top: 7vh;
+ }
+
+ #social-logos {
+   width: 100%;
+   bottom: 0;
+   text-align: center;
+   font-size: 3.25em;
+   color: white;
+ }
+
+ .github-logo {
+
+   margin-left: 5vw;
+
+ }
+
+ .linkedin-logo {
+
+   margin-left: 5vw;
+
+ }
+
+ .gmail-logo {
+
+   margin-left: 5vw;
+
+ }
+
+ /*End of header   */
+
+ /*Start of about   */
+ #about {
+   padding: 5vw;
+   font-size: 1em;
+   padding-top: 100px;
+ }
+
+ #about img {
+   text-align: left;
+   width: 100%;
+   border-radius: 50%;
+ }
+
+ .welcome {
+   display: flex;
+   align-items: center;
+ }
+
+ .message {
+   margin-top: 5vh;
+ }
+
+ /*end of about   */
+ /*Start of work Experience   */
+ #workExperience {
+
+   padding: 5vw;
+ }
+
+ #workExperience img {
+   width: 80%;
 
 
-#models img{
-  
-  width: 100%;
-  height: 100%;
-}
+ }
+
+ #workExperience header {
+   margin-bottom: 100px;
+
+ }
+
+ /*End of work Experience   */
+
+ /*Start of education Experience   */
+ #education {
+   padding: 5vw;
+ }
+
+ #education header {
+   margin-bottom: 100px;
+
+ }
+
+ #education #schools img {
+   padding-right: 12px;
+   width: 90%;
+
+ }
+
+ #certificates {
+   padding-top: 100px;
+
+ }
 
 
-/*End of education Experience   */
-/* End of homeContent */
-/*End of homePage  */
+ #certificates figure {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
 
 
-footer {
- text-align: center;
-  padding: 3px;
-  background-color: rgba(0,0,0,.75);
-  color: white;
-  font-size: 2em;
-}
+ }
 
-footer a{
-  color: white;
-  display: inline-flex;
-}
+ #certificates figure img {
+   position: relative;
+   width: 100%;
+   height: 80%;
+   text-align: center;
 
 
+ }
+
+ #certificates button {
+
+   padding: 0;
+   margin: 0;
+   width: 100%;
+   height: 20%;
+   height: 50px;
+
+
+ }
+
+ .moreCertificates {
+   font-size: 2em;
+   text-align: center;
+   background-color: rgb(210, 245, 237);
+ }
+
+
+ #models img {
+
+   width: 100%;
+   height: 100%;
+ }
+
+
+ /*End of education Experience   */
+ /* End of homeContent */
+ /*End of homePage  */
+
+
+ footer {
+   text-align: center;
+   padding: 3px;
+   background-color: rgba(0, 0, 0, .75);
+   color: white;
+   font-size: 2em;
+ }
+
+ footer a {
+   color: white;
+   display: inline-flex;
+ }
