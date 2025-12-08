@@ -28,6 +28,19 @@ let page_sections =
                 }
             ]
         }
+        ,
+        {
+            "id": "IOT",
+            "courseName": "Internet of Things with AWS",
+            "school": "Amazon Web Services",
+            "projects": [
+                {
+                    "title": "Teltonika FMC150 Live Tracking",
+                    "ref": "projects/IOT/FMC150LiveTracking/index.html",
+                    "summary": `Create a live tracking web app that uses AWS IoT Core to receive data from a Teltonika FMC150 GPS tracker.`
+                }
+            ]
+        }
 
     ];
 
