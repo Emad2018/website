@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional CV & Resume Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- FIXED TOP STICKY HEADER -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="brand">
+                <h1>CV Builder</h1>
+            </div>
+
+            <div class="header-controls">
+                <!-- Cloud Sync -->
+                <div class="control-group">
+                    <input type="text" id="employeeId" placeholder="Profile ID (e.g. MY-CV-01)">
+                    <button type="button" class="btn-head btn-cloud-load" id="btnLoadAWS">☁ Load Cloud</button>
+                    <button type="button" class="btn-head btn-cloud-save" id="btnSaveAWS">☁ Save Cloud</button>
+                </div>
+
+                <!-- Local File JSON -->
+                <div class="control-group">
+                    <label class="btn-head btn-json-load">
+                        📂 Import JSON
+                        <input type="file" id="jsonFileInput" accept=".json" hidden>
+                    </label>
+                    <button type="button" class="btn-head btn-json-export" id="btnExportJSON">💾 Export JSON</button>
+                </div>
+
+                <!-- Actions & Layout Selector -->
+                <div class="control-group">
+                    <select id="resumeLayout">
+                        <option value="modern">Modern Split (2-Column)</option>
+                        <option value="classic">Classic Single Column</option>
+                    </select>
+                    <button type="button" class="btn-head btn-action-gen" id="btnGenerate">⚡ Generate Resume</button>
+                    <button type="button" class="btn-head btn-action-clear" id="btnClear">🗑 Clear</button>
+                </div>
+            </div>
+        </div>
+        <div id="statusNotification" class="status-bar"></div>
+    </header>
+
+    <div class="container">
+        <!-- FORM BUILDER SECTION -->
+        <section id="form-section">
+            <div id="sections-wrapper">
+
+                <!-- 1. Personal & Contact Info -->
+                <div class="section-group" data-section-key="contactInfo">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Personal & Contact Info</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="1" min="1"></label>
+                        </div>
+                    </div>
+                    <div class="input-grid">
+                        <input type="text" id="empName" placeholder="Full Name (e.g. Abdelrahman Ibrahim)">
+                        <input type="email" id="empEmail" placeholder="Email Address">
+                        <input type="text" id="empPhone" placeholder="Phone Number">
+                        <input type="text" id="empLinkedIn" placeholder="LinkedIn URL / Handle">
+                        <input type="text" id="empGitHub" placeholder="GitHub URL / Handle" style="grid-column: span 2;">
+                    </div>
+                </div>
+
+                <!-- 2. Profile Summary -->
+                <div class="section-group" data-section-key="profileSummary">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Profile Summary</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="2" min="1"></label>
+                        </div>
+                    </div>
+                    <textarea id="profileSummaryText" rows="4" placeholder="Brief professional overview..."></textarea>
+                </div>
+
+                <!-- 3. Technical Skills & Competences -->
+                <div class="section-group" data-section-key="competences">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Technical Skills & Competences</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="3" min="1"></label>
+                        </div>
+                    </div>
+                    <div class="input-grid">
+                        <input type="text" id="compDomain" placeholder="Primary Domain (e.g. Embedded Systems & ML)">
+                        <textarea id="compTasks" placeholder="Skills / Categories (One item per line)"></textarea>
+                    </div>
+                </div>
+
+                <!-- 4. Projects & Roles -->
+                <div class="section-group" data-section-key="projects">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Projects & Roles</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="4" min="1"></label>
+                        </div>
+                    </div>
+                    <div id="projects-container" class="drag-container"></div>
+                    <button type="button" class="btn-add" id="btnAddProject">+ Add Project</button>
+                </div>
+
+                <!-- 5. Academic Degrees -->
+                <div class="section-group" data-section-key="education">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Academic Degrees</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="5" min="1"></label>
+                        </div>
+                    </div>
+                    <div id="education-container" class="drag-container"></div>
+                    <button type="button" class="btn-add" id="btnAddEducation">+ Add Education</button>
+                </div>
+
+                <!-- 6. Courses & Certifications -->
+                <div class="section-group" data-section-key="courses">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Courses & Certifications</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="6" min="1"></label>
+                        </div>
+                    </div>
+                    <div id="course-container" class="drag-container"></div>
+                    <button type="button" class="btn-add" id="btnAddCourse">+ Add Course</button>
+                </div>
+
+                <!-- 7. Languages -->
+                <div class="section-group" data-section-key="languages">
+                    <div class="section-header">
+                        <div class="section-drag-handle">⋮⋮</div>
+                        <label class="include-toggle">
+                            <input type="checkbox" class="section-include" checked> Include
+                        </label>
+                        <h2>Languages</h2>
+                        <div class="section-order-box">
+                            <label>Order: <input type="number" class="section-order-val" value="7" min="1"></label>
+                        </div>
+                    </div>
+                    <div id="language-container" class="drag-container"></div>
+                    <button type="button" class="btn-add" id="btnAddLanguage">+ Add Language</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PREVIEW SECTION -->
+        <section id="preview-section" style="display:none;">
+            <div class="preview-actions">
+                <button class="btn-head btn-action-gen" id="btnPrintPDF">🖨 Print / Save PDF</button>
+                <button class="btn-head btn-action-clear" id="btnBackToForm">✏ Edit Data</button>
+            </div>
+            <div id="resume-template" class="cv-template"></div>
+        </section>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
