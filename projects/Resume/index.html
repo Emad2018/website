@@ -100,10 +100,11 @@
                             <label>Order: <input type="number" class="section-order-val" value="3" min="1"></label>
                         </div>
                     </div>
-                    <div class="input-grid">
-                        <input type="text" id="compDomain" placeholder="Primary Domain (e.g. Embedded Systems & ML)">
-                        <textarea id="compTasks" placeholder="Skills / Categories (One item per line)"></textarea>
+                    <div class="input-grid" style="margin-bottom: 12px;">
+                        <input type="text" id="compDomain" placeholder="Primary Domain (e.g. Embedded Systems & ML)" style="grid-column: span 2;">
                     </div>
+                    <div id="skills-container" class="drag-container"></div>
+                    <button type="button" class="btn-add" id="btnAddSkill">+ Add Skill Category</button>
                 </div>
 
                 <!-- 4. Projects & Roles -->

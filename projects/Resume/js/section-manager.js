@@ -21,6 +21,27 @@ function createBaseRow(className, html) {
     return div;
 }
 
+export function addSkillCategory(data = null) {
+    const container = document.getElementById('skills-container');
+    const html = `
+        <div class="card-controls">
+            <span class="drag-handle" style="cursor:grab; color:#aaa;">::: DRAG :::</span>
+            <button type="button" class="btn-delete">✕ Delete</button>
+        </div>
+        <div class="input-grid">
+            <input type="text" class="skl-category" placeholder="Category Name (e.g. Programming skills)" style="grid-column: span 2;">
+            <textarea class="skl-items" placeholder="Skills / Items (one per line)" style="grid-column: span 2;" rows="3"></textarea>
+        </div>`;
+    const row = createBaseRow('skill-item', html);
+    row.querySelector('.btn-delete').addEventListener('click', () => removeRow(row.querySelector('.btn-delete')));
+
+    if (data) {
+        row.querySelector('.skl-category').value = data.category || "";
+        row.querySelector('.skl-items').value = Array.isArray(data.items) ? data.items.join('\n') : (data.items || "");
+    }
+    container.appendChild(row);
+}
+
 export function addProject(data = null) {
     const container = document.getElementById('projects-container');
     const html = `

@@ -1,5 +1,5 @@
 import { showStatus, saveLocalDraft, getLocalDraft, exportToJSONFile, loadFromAWS, submitToAWS } from './storage.js';
-import { addProject, addEducation, addCourse, addLanguage, initDragAndDrop, reorderSectionsByValue } from './section-manager.js';
+import { addProject, addEducation, addCourse, addLanguage, addSkillCategory, initDragAndDrop, reorderSectionsByValue } from './section-manager.js';
 import { collectFormData, generateResume } from './resume-generator.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btnAddEducation').addEventListener('click', () => addEducation());
     document.getElementById('btnAddCourse').addEventListener('click', () => addCourse());
     document.getElementById('btnAddLanguage').addEventListener('click', () => addLanguage());
+    document.getElementById('btnAddSkill').addEventListener('click', () => addSkillCategory());
 
     // 2. Wire Header Controls
     document.getElementById('btnLoadAWS').addEventListener('click', async () => {
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addEducation();
         addCourse();
         addLanguage();
+        addSkillCategory();
     }
 });
 
@@ -107,7 +109,6 @@ function populateForm(data) {
 
     document.getElementById('profileSummaryText').value = data.profileSummary || "";
     document.getElementById('compDomain').value = data.competences?.domain || "";
-    document.getElementById('compTasks').value = (data.competences?.tasks || []).join('\n');
 
     // Populate Dynamic Lists
     const prjContainer = document.getElementById('projects-container');
@@ -125,6 +126,16 @@ function populateForm(data) {
     const langContainer = document.getElementById('language-container');
     langContainer.innerHTML = '';
     (data.languages || []).forEach(l => addLanguage(l));
+
+    const sklContainer = document.getElementById('skills-container');
+    sklContainer.innerHTML = '';
+    if (data.competences?.categories && Array.isArray(data.competences.categories)) {
+        data.competences.categories.forEach(s => addSkillCategory(s));
+    } else if (data.competences?.tasks && Array.isArray(data.competences.tasks)) {
+        addSkillCategory({ category: "Skills", items: data.competences.tasks });
+    } else {
+        addSkillCategory();
+    }
 
     // Restore section order and inclusion if saved
     if (data.sectionConfig) {

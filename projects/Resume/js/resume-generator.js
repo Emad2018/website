@@ -36,7 +36,10 @@ export function collectFormData() {
         profileSummary: document.getElementById('profileSummaryText').value,
         competences: {
             domain: document.getElementById('compDomain').value,
-            tasks: document.getElementById('compTasks').value.split('\n').filter(t => t.trim())
+            categories: [...document.querySelectorAll('.skill-item')].map(el => ({
+                category: el.querySelector('.skl-category').value.trim(),
+                items: el.querySelector('.skl-items').value.split('\n').map(t => t.trim()).filter(t => t)
+            }))
         },
         projects: [...document.querySelectorAll('.project-item')].map(el => {
             const prj = {
@@ -90,6 +93,23 @@ export function generateResume(data) {
     } else {
         renderModernLayout(container, data, isIncluded);
     }
+}
+
+function renderSkillsCategories(competences) {
+    if (!competences) return '';
+    const categories = competences.categories || [];
+    if (!categories.length && competences.tasks) {
+        return competences.tasks.map(t => `<li style="margin-bottom: 2px;">${t}</li>`).join('');
+    }
+    
+    return categories.map(cat => `
+        <div style="margin-bottom: 10px;">
+            ${cat.category ? `<div style="font-weight: bold; font-size: 0.88rem; margin-bottom: 3px; color: var(--primary);">${cat.category}:</div>` : ''}
+            <ul style="padding-left: 18px; margin: 0; font-size: 0.85rem; line-height: 1.4;">
+                ${(cat.items || []).map(item => `<li style="margin-bottom: 2px;">${item}</li>`).join('')}
+            </ul>
+        </div>
+    `).join('');
 }
 
 function renderClassicLayout(container, data, isIncluded) {
@@ -160,10 +180,8 @@ function renderClassicLayout(container, data, isIncluded) {
         ${isIncluded('competences') ? `
         <div class="cv-section">
             <div class="cv-title">COMPETENCES & SKILLS</div>
-            <p style="margin-bottom:6px;"><strong>Domain:</strong> ${data.competences.domain}</p>
-            <div style="display:flex; flex-wrap:wrap; gap:6px;">
-                ${data.competences.tasks.map(t => `<span class="tech-badge">${t}</span>`).join('')}
-            </div>
+            ${data.competences.domain ? `<p style="margin-bottom:6px;"><strong>Domain:</strong> ${data.competences.domain}</p>` : ''}
+            ${renderSkillsCategories(data.competences)}
         </div>` : ''}
 
         ${isIncluded('projects') ? `
@@ -263,15 +281,13 @@ function renderModernLayout(container, data, isIncluded) {
                 ${isIncluded('competences') ? `
                 <div class="modern-section-group">
                     <h2 class="modern-section-title">Skills</h2>
-                    <div style="display:flex; flex-wrap:wrap; gap:4px;">
-                        ${data.competences.tasks.map(t => `<span class="tech-badge">${t}</span>`).join('')}
-                    </div>
+                    ${renderSkillsCategories(data.competences)}
                 </div>` : ''}
 
                 ${isIncluded('languages') ? `
                 <div class="modern-section-group">
                     <h2 class="modern-section-title">Languages</h2>
-                    <ul class="modern-skills-list">
+                    <ul class="modern-skills-list" style="padding-left: 18px;">
                         ${data.languages.map(l => `<li><strong>${l.name}:</strong> ${l.level}</li>`).join('')}
                     </ul>
                 </div>` : ''}
@@ -279,7 +295,7 @@ function renderModernLayout(container, data, isIncluded) {
                 ${isIncluded('courses') ? `
                 <div class="modern-section-group">
                     <h2 class="modern-section-title">Courses</h2>
-                    <ul style="padding-left:15px; font-size:0.85rem; margin:0;">
+                    <ul style="padding-left:18px; font-size:0.85rem; margin:0;">
                         ${data.courses.map(c => `<li>${c.name} ${c.year ? '(' + c.year + ')' : ''}</li>`).join('')}
                     </ul>
                 </div>` : ''}
