@@ -11,6 +11,11 @@ let page_sections =
                     "title": "Landing Page",
                     "ref": "projects/FEND/Landing Page project/index.html",
                     "summary": `Build a landing page that uses JavaScript to create an interactive navigational experience for the user.`
+                },
+                {
+                    "title": "Resume Generator",
+                    "ref": "projects/Resume/index.html",
+                    "summary": `Generate a resume from JSON and save and load it to the cloud.`
                 }
 
             ]

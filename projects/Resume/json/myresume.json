@@ -1,0 +1,224 @@
+{
+  "employeeId": "Abdelrahman Ibrahim",
+  "layout": "modern",
+  "name": "Abdelrahman Ibrahim",
+  "contact": {
+    "email": "a.emad02018@gmail.com",
+    "phone": "+4915754179300",
+    "linkedin": "linkedin.com/in/abdelrahman-emadeldeen",
+    "github": "github.com/Emad2018"
+  },
+  "profileSummary": "Experienced Principal Software Developer specializing in AUTOSAR stack configuration, ECU software integration, C/C++, and Python. Proven track record in memory stack management, safety module configuration, and diagnostic testing for automotive software solutions.",
+  "competences": {
+    "domain": "Embedded Systems, Machine Learning & Computer Vision",
+    "tasks": [
+      "Programming: C/C++, Python, MATLAB",
+      "AUTOSAR Tools: DaVinci Developer & Configurator, EB Tresos, ISOLAR A/B, AUTOSAR Builder",
+      "Testing & Debugging: CANoe, VectorCAST, Lauterbach TRACE32, iSYSTEM",
+      "Process & VCS: JIRA, Confluence, Jazz, Plastic SCM, Git / GitHub",
+      "Microcontrollers & Boards: Renesas RH850, Infineon AURIX TriCore, NVIDIA Jetson TX2 / Nano"
+    ]
+  },
+  "projects": [
+    {
+      "customer": "Techno Welle GmbH",
+      "location": "Germany",
+      "roles": "Principal Software Developer",
+      "from": "2026-07",
+      "to": "Present",
+      "responsibilities": [
+        "Developed On-Screen Display (OSD) software components (SWCs).",
+        "Developed video watermark detection features.",
+        "Performed system debugging and defect resolution.",
+        "Configured AUTOSAR RTE ports, runnables, DIDs, and NVRAM.",
+        "Created debugger helper scripts and CANoe CAPL scripts for testing and validation purposes."
+      ],
+      "tools": [
+        "Vector DaVinci Developer & Configurator",
+        "IAR Debugger",
+        "Vector CANoe"
+      ],
+      "platform": "Novatek T-CON Processors, Infineon AURIX TriCore"
+    },
+    {
+      "customer": "Techno Welle GmbH",
+      "location": "Germany",
+      "roles": "Senior SW Engineer",
+      "from": "2025-10",
+      "to": "2026-06",
+      "responsibilities": [
+        "Implemented a gateway to convert raw sensor data into readable formats.",
+        "Configured AWS services including AWS IoT Core, DynamoDB, S3, EC2, and API Gateway.",
+        "Developed the backend architecture for user, company, fleet, trip, and device management.",
+        "Developed a simulator GUI using real-world data to test system reliability.",
+        "Developed a performance analysis GUI to evaluate and compare metrics across different sensors."
+      ],
+      "tools": [
+        "AWS IoT Core",
+        "DynamoDB",
+        "S3",
+        "EC2",
+        "API Gateway",
+        "Python"
+      ],
+      "platform": "Cloud / Embedded Gateway"
+    },
+    {
+      "customer": "Techno Welle GmbH",
+      "location": "Germany",
+      "roles": "Senior SW Engineer",
+      "from": "2023-05",
+      "to": "2025-08",
+      "responsibilities": [
+        "Implemented various Application Software Components (SWCs) including NVM, OBD, Histogram, and Passive Discharge.",
+        "Configured modules across Memory, Communication, and Mode Management stacks.",
+        "Configured ECU safety modules including FISTEST and ECM.",
+        "Developed CAPL scripts and automated test modules to reproduce and analyze software bugs.",
+        "Executed LDF and DEXT file integration for vehicle networking."
+      ],
+      "tools": [
+        "ETAS ISOLAR A/B",
+        "CANoe",
+        "iSYSTEM Debugger"
+      ],
+      "platform": "Renesas RH850"
+    },
+    {
+      "customer": "Swift Act",
+      "location": "Egypt",
+      "roles": "Senior SW Engineer",
+      "from": "2022-10",
+      "to": "2023-04",
+      "responsibilities": [
+        "Configured End-to-End (E2E) data protection mechanisms for CAN messages.",
+        "Integrated CAN DBC files and Complex Device Drivers (CDDs).",
+        "Analyzed software requirements and authored technical specification documents."
+      ],
+      "tools": [
+        "CAN",
+        "E2E",
+        "DBC",
+        "CDD"
+      ],
+      "platform": "Infineon AURIX TriCore, Automotive ECU"
+    },
+    {
+      "customer": "ExpleoGroup",
+      "location": "Egypt",
+      "roles": "SW Engineer",
+      "from": "2022-01",
+      "to": "2022-09",
+      "responsibilities": [
+        "Configured AUTOSAR NVM (Non-Volatile Memory) BSW modules.",
+        "Debugged auto-generated MATLAB/Simulink code and reported root-cause findings to application teams.",
+        "Configured CAN signals, network interfaces, and message frames."
+      ],
+      "tools": [
+        "AUTOSAR Builder",
+        "EB Tresos",
+        "Lauterbach TRACE32"
+      ],
+      "platform": "Infineon AURIX TriCore"
+    },
+    {
+      "customer": "Avelabs",
+      "location": "Egypt",
+      "roles": "Embedded SW Engineer",
+      "from": "2019-05",
+      "to": "2021-12",
+      "responsibilities": [
+        "Designed and configured NVM blocks using Vector DaVinci Developer and DaVinci Configurator.",
+        "Implemented failure-detection indication flags for NVM read/write operations.",
+        "Created Application Layer SWCs and configured RTE ports using Vector DaVinci Developer.",
+        "Executed unit testing and bug fixing using VectorCAST, CANoe, and Lauterbach TRACE32.",
+        "Managed issue tracking, branch merging workflows, and software releases using JIRA and Plastic SCM."
+      ],
+      "tools": [
+        "DaVinci Developer",
+        "DaVinci Configurator",
+        "VectorCAST",
+        "CANoe",
+        "Lauterbach TRACE32"
+      ],
+      "platform": "AUTOSAR BSW / RTE"
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. Mechatronics Engineering",
+      "university": "Ain Shams University, Egypt",
+      "from": "2013-09",
+      "to": "2018-07"
+    }
+  ],
+  "courses": [
+    {
+      "name": "AWS Certified Machine Learning - Specialty",
+      "provider": "AWS"
+    },
+    {
+      "name": "Udacity Machine Learning Nanodegree",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Udacity Self-Driving Car Nanodegree",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Udacity Sensor Fusion Nanodegree",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Udacity C++ Nanodegree",
+      "provider": "Udacity"
+    },
+    {
+      "name": "Udacity Computer Vision Nanodegree",
+      "provider": "Udacity"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Arabic",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Advanced C1"
+    },
+    {
+      "name": "German",
+      "level": "A2"
+    }
+  ],
+  "sectionConfig": {
+    "contactInfo": {
+      "order": 1,
+      "included": true
+    },
+    "profileSummary": {
+      "order": 2,
+      "included": true
+    },
+    "competences": {
+      "order": 3,
+      "included": true
+    },
+    "projects": {
+      "order": 4,
+      "included": true
+    },
+    "education": {
+      "order": 5,
+      "included": true
+    },
+    "courses": {
+      "order": 6,
+      "included": true
+    },
+    "languages": {
+      "order": 7,
+      "included": true
+    }
+  }
+}
