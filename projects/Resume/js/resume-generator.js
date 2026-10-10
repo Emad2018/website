@@ -151,6 +151,12 @@ function renderClassicLayout(container, data, isIncluded) {
             <p style="line-height: 1.5; font-size: 0.92rem;">${data.profileSummary}</p>
         </div>` : ''}
 
+        ${isIncluded('education') ? `
+        <div class="cv-section">
+            <div class="cv-title">ACADEMIC DEGREES</div>
+            ${eduHTML || '<p>No education provided.</p>'}
+        </div>` : ''}
+
         ${isIncluded('competences') ? `
         <div class="cv-section">
             <div class="cv-title">COMPETENCES & SKILLS</div>
@@ -164,12 +170,6 @@ function renderClassicLayout(container, data, isIncluded) {
         <div class="cv-section">
             <div class="cv-title">PROJECT DETAILS & RESPONSIBILITIES</div>
             ${projHTML || '<p>No projects provided.</p>'}
-        </div>` : ''}
-
-        ${isIncluded('education') ? `
-        <div class="cv-section">
-            <div class="cv-title">ACADEMIC DEGREES</div>
-            ${eduHTML || '<p>No education provided.</p>'}
         </div>` : ''}
 
         ${isIncluded('courses') ? `
@@ -220,11 +220,13 @@ function renderModernLayout(container, data, isIncluded) {
         `;
     }).join('');
 
-    const modernEdu = data.education.map(e => `
-        <div style="margin-bottom: 10px;">
-            <div style="font-weight: bold; color: var(--primary);">${e.university}</div>
-            <div style="font-size: 0.88rem;">${e.degree}</div>
-            <div style="font-size: 0.82rem; color: #666;">${formatDate(e.from)}${e.from && e.to ? ' – ' : ''}${formatDate(e.to)}</div>
+    const modernEduFull = data.education.map(e => `
+        <div style="margin-bottom: 8px; display: flex; justify-content: space-between; align-items: baseline;">
+            <div>
+                <span style="font-weight: bold; color: var(--primary);">${e.degree}</span>
+                <span style="margin-left: 10px; font-size: 0.9rem; color: #444;">${e.university}</span>
+            </div>
+            <div style="font-size: 0.85rem; color: #666; font-weight: 600;">${formatDate(e.from)}${e.from && e.to ? ' – ' : ''}${formatDate(e.to)}</div>
         </div>
     `).join('');
 
@@ -244,14 +246,20 @@ function renderModernLayout(container, data, isIncluded) {
             </div>
         </div>` : ''}
 
+        ${isIncluded('profileSummary') && data.profileSummary ? `
+        <div class="modern-section-group" style="margin-bottom: 16px;">
+            <h2 class="modern-section-title">Profile</h2>
+            <p style="font-size:0.88rem; line-height:1.45; margin-top:0;">${data.profileSummary}</p>
+        </div>` : ''}
+
+        ${isIncluded('education') ? `
+        <div class="modern-section-group" style="margin-bottom: 16px;">
+            <h2 class="modern-section-title">Education</h2>
+            ${modernEduFull || '<p>No data</p>'}
+        </div>` : ''}
+
         <div class="modern-layout">
             <div class="modern-sidebar">
-                ${isIncluded('education') ? `
-                <div class="modern-section-group">
-                    <h2 class="modern-section-title">Education</h2>
-                    ${modernEdu || '<p>No data</p>'}
-                </div>` : ''}
-
                 ${isIncluded('competences') ? `
                 <div class="modern-section-group">
                     <h2 class="modern-section-title">Skills</h2>
@@ -278,12 +286,6 @@ function renderModernLayout(container, data, isIncluded) {
             </div>
 
             <div class="modern-main">
-                ${isIncluded('profileSummary') && data.profileSummary ? `
-                <div class="modern-section-group">
-                    <h2 class="modern-section-title">Profile</h2>
-                    <p style="font-size:0.88rem; line-height:1.45; margin-top:0;">${data.profileSummary}</p>
-                </div>` : ''}
-
                 ${isIncluded('projects') ? `
                 <div class="modern-section-group">
                     <h2 class="modern-section-title">Projects & Experience</h2>
